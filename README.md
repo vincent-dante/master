@@ -14,6 +14,7 @@ https://pokemon-trainer-vincent-dante.vercel.app/
 - Search & Pagination for pokemons.
 - UI - Landing Page, Profile Page.
 - Validation for creating Pokemon Trainer.
+- Add, Rename & Delete selected pokemons.
 - Mobile Responsive.
 - Dark & Light Theme.
 - Using LocalStorage to store pokemon trainer data.
