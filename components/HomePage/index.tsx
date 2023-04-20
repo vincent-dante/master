@@ -173,7 +173,7 @@ const HomePage = () => {
 
       {/* Selected Pokemons */}
       <div className="py-20">
-        <h2 className="w-full pb-5 text-left text-xl text-slate-500 dark:text-slate-400">
+        <h2 className="w-full pb-5 text-left text-xl font-bold text-slate-500 dark:text-slate-400">
           Pokemons selected: {selectedPokemons.length}
         </h2>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
@@ -200,18 +200,18 @@ const HomePage = () => {
       {/* Pokemon Grid */}
       <div>
         <div className="flex flex-wrap items-center justify-between gap-5 pb-10">
-          <h2 className="w-full text-left text-xl text-slate-500 dark:text-slate-400 md:w-fit">
+          <h2 className="w-full text-left text-xl font-bold text-slate-500 dark:text-slate-400 md:w-fit">
             Choose your pokemons here
           </h2>
           <input
             type="text"
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search Pokemon"
-            className="w-full rounded-md border border-slate-500 px-3 py-2 text-sm focus:outline-none dark:border-slate-600 dark:bg-transparent dark:text-slate-300 dark:focus:border-slate-500 md:w-52"
+            className="w-full rounded-md border border-slate-500 px-3 py-2 text-sm text-slate-500 focus:outline-none dark:border-slate-600 dark:bg-transparent dark:text-slate-300 dark:focus:border-slate-500 md:w-52"
           />
         </div>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-5">
-          {filteredPokemons.length !== 0 &&
+          {filteredPokemons.length !== 0 ? (
             filteredPokemons.map((pokemon, index) => (
               <PokemonCard
                 pokemon={pokemon}
@@ -224,7 +224,12 @@ const HomePage = () => {
                     : ''
                 }`}
               />
-            ))}
+            ))
+          ) : (
+            <p className="col-span-1 text-center font-bold text-slate-500 md:col-span-6">
+              No Pokemons found.
+            </p>
+          )}
         </div>
       </div>
 
@@ -241,7 +246,7 @@ const HomePage = () => {
                 pageRange: parseInt(e.target.value),
               }));
             }}
-            className="rounded-md border border-slate-500 py-2 px-3 focus:outline-none dark:border-slate-600 dark:bg-dark-400 dark:text-slate-300 dark:focus:border-slate-500"
+            className="rounded-md border border-slate-500 bg-white py-2 px-3 focus:outline-none dark:border-slate-600 dark:bg-dark-400 dark:text-slate-300 dark:focus:border-slate-500"
           >
             <option value="20">20</option>
             <option value="30">30</option>
