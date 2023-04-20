@@ -1,10 +1,8 @@
-# Box nfts :fire:
-
-Hi there 👋 this is my personal project name Box nfts.
+# Pokemon Trainer :fire:
 
 ## Live preview
 
-https://box-nfts.vercel.app/
+https://pokemon-trainer-vincent-dante.vercel.app/
 
 ## Tech Stacks
 
@@ -13,7 +11,12 @@ https://box-nfts.vercel.app/
 
 ## Features
 
-- Home page ui for Nft marketplace.
+- Search & Pagination for pokemons.
+- UI - Landing Page, Profile Page.
+- Validation for creating Pokemon Trainer.
+- Mobile Responsive.
+- Dark & Light Theme.
+- Using LocalStorage to store pokemon trainer data.
 
 ## Build Setup
 

@@ -61,7 +61,7 @@ export default function ProfilePage() {
             />
           )}
         </div>
-        <h2 className="w-full pb-5 font-bold dark:text-slate-500">
+        <h2 className="w-full pb-5 font-bold text-slate-500">
           {trainer.trainerName}
         </h2>
       </div>
