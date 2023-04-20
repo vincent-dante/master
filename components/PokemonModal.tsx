@@ -32,6 +32,11 @@ export default function PokemonModal() {
         trainerName: trainerName === '' ? REQUIRED_MESSAGE.TRAINER_NAME : '',
       });
       return;
+    } else {
+      setValidationMessage({
+        trainerImage: '',
+        trainerName: '',
+      });
     }
 
     if (pokemons.firstGeneration.length === 0) {
